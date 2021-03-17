@@ -1,0 +1,32 @@
+This is a quick introduction to the Python-side of the urinalysis test reader for Basis.
+My environment has Python 3.7 installed. It has not been tested on other versions, but I would expect it to be compatible
+with 3.6-3.8. Tread lightly though ...
+
+There are four sub-directories within the main project directory:
+1. Aruco Tags
+These are images of Aruco tags that can be used on the Basis UA covers
+2. Basis Urinalysis Covers
+This is a PPT and SVG of the Basis UA cover
+3. TempResults
+This is a storage directory for temp results
+4. Test Images
+This is a storage direcotry for test images of UA strips, and for color analysis of the UA standards
+
+There are a handful of Python files inside the main directory:
+1. README
+This current file. Good starting point!
+2. requirements.txt
+This is a requirements list for all python libraries used in this project. These requirements can be installed by:
+cd /path/to/project
+pip install -r requirements.txt
+^ This may have to be pip3 depending on your configuration
+3. AssayStandardCurve.py
+This is the code used to generate the different standard curve/best fits for each assay. (Beware: messy ...)
+4. generateArucoMarkers.py
+Code to generate Aruco markers that are put on the Basis UA covers.
+5. PlottingImagesToMakeMeasurements.py
+Code to show the color chart images (images of the bottle of UA test strips) so HSV measurements can be made.
+6. analyzeUrinalysisImage.py
+The image processing algorithm. Does the heavy lifting.
+7. urinalysisReader.py
+The driver that should be called from your server. This calls analyzeUrinalysisImage.

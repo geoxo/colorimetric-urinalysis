@@ -1,0 +1,12 @@
+#
+####### Python Requirements#######
+#
+
+###### Requirements with Version Specifiers ######
+cv2 == 4.4.0
+numpy == 1.19.5
+matplotlib == 3.3.0
+imutils == 0.5.3
+skimage == 0.18.1
+
+
